@@ -1,0 +1,73 @@
+/*
+ * RESET CSS — BASE REUTILIZABLE v1
+ * Independiente de colores, fuentes, frameworks y componentes.
+ * Aplicar antes de los estilos globales del proyecto.
+ */
+
+/* 1. Dimensiones predecibles, incluso en pseudoelementos. */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Empezar sin margenes ni rellenos heredados del navegador.
+   Respetamos dialog para conservar su centrado nativo. */
+*:not(dialog) {
+    margin: 0;
+    padding: 0;
+}
+
+/* 3. Preservar la sangria necesaria para marcadores de listas.
+   Nunca eliminamos globalmente list-style. */
+:where(ul, ol) {
+    padding-inline-start: 1.5em;
+}
+
+/* 4. Controles: tipografia consistente sin eliminar apariencia nativa. */
+:where(button, input, select, textarea) {
+    font: inherit;
+}
+
+/* 5. Multimedia adaptable. Los SVG conservan su display original
+   para no romper iconos en linea. */
+:where(img, picture, video, canvas) {
+    display: block;
+    max-width: 100%;
+}
+
+:where(img, video) {
+    height: auto;
+}
+
+:where(svg) {
+    max-width: 100%;
+}
+
+/* 6. Evitar desbordamientos por cadenas de texto muy largas. */
+:where(p, h1, h2, h3, h4, h5, h6, li, blockquote) {
+    overflow-wrap: break-word;
+}
+
+/* 7. Tablas sin separacion artificial entre celdas. */
+:where(table) {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* 8. Respetar el atributo hidden sin romper hidden="until-found". */
+[hidden]:not([hidden="until-found"]) {
+    display: none !important;
+}
+
+/* 9. Legibilidad base y evitar escalados inesperados al rotar iOS. */
+html {
+    -webkit-text-size-adjust: 100%;
+}
+
+body {
+    line-height: 1.5;
+}
+
+/* Deliberadamente NO eliminamos outlines, subrayados, marcadores
+   semanticos, apariencias de controles ni animaciones globalmente. */

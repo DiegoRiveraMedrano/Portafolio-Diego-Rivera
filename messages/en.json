@@ -1,0 +1,10 @@
+{
+    "Home": {
+        "subtitle": "I build software that solves real-world problems. From concept to production.",
+        "projects": "View projects"
+    },
+    "Projects": {
+        "title": "My projects",
+        "back": "Back to home"
+    }
+}
